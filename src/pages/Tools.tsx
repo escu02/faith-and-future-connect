@@ -1,4 +1,3 @@
-
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,72 +5,58 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Book, Video, Users, Calendar } from "lucide-react";
-
 const Tools = () => {
   // Sample courses data
-  const courses = [
-    {
-      id: 1,
-      title: "Faith-Integrated Resume Building",
-      category: "Career",
-      description:
-        "Learn how to effectively translate your parish leadership, mission trips, and spiritual formation into valuable professional skills on your resume.",
-      instructor: "Michael Chen, HR Director & Catholic Speaker",
-      duration: "3 hours",
-      level: "Beginner"
-    },
-    {
-      id: 2,
-      title: "Catholic Principles in Business Ethics",
-      category: "Formation",
-      description:
-        "Explore how Catholic social teaching provides a framework for ethical business decisions and leadership practices.",
-      instructor: "Dr. Maria Gonzalez, Professor of Business Ethics",
-      duration: "8 hours",
-      level: "Intermediate"
-    },
-    {
-      id: 3,
-      title: "Interview Skills for Catholic Professionals",
-      category: "Career",
-      description:
-        "Practical techniques for communicating your values and experience effectively during job interviews.",
-      instructor: "James Wilson, Career Coach",
-      duration: "4 hours",
-      level: "Beginner"
-    }
-  ];
+  const courses = [{
+    id: 1,
+    title: "Faith-Integrated Resume Building",
+    category: "Career",
+    description: "Learn how to effectively translate your parish leadership, mission trips, and spiritual formation into valuable professional skills on your resume.",
+    instructor: "Michael Chen, HR Director & Catholic Speaker",
+    duration: "3 hours",
+    level: "Beginner"
+  }, {
+    id: 2,
+    title: "Catholic Principles in Business Ethics",
+    category: "Formation",
+    description: "Explore how Catholic social teaching provides a framework for ethical business decisions and leadership practices.",
+    instructor: "Dr. Maria Gonzalez, Professor of Business Ethics",
+    duration: "8 hours",
+    level: "Intermediate"
+  }, {
+    id: 3,
+    title: "Interview Skills for Catholic Professionals",
+    category: "Career",
+    description: "Practical techniques for communicating your values and experience effectively during job interviews.",
+    instructor: "James Wilson, Career Coach",
+    duration: "4 hours",
+    level: "Beginner"
+  }];
 
   // Sample mentoring sessions
-  const mentoringSessions = [
-    {
-      id: 1,
-      title: "Balancing Faith and Corporate Culture",
-      mentor: "Elizabeth Davis, CFO & Catholic Women's Group Leader",
-      date: "May 10, 2025",
-      time: "7:00 PM EST",
-      spots: 15
-    },
-    {
-      id: 2,
-      title: "Catholic Leadership in Tech Industries",
-      mentor: "Thomas Rodriguez, Senior Engineering Director",
-      date: "May 15, 2025",
-      time: "6:30 PM EST",
-      spots: 10
-    },
-    {
-      id: 3, 
-      title: "From Youth Ministry to Management Skills",
-      mentor: "Fr. Robert Johnson, Former Business Executive",
-      date: "May 20, 2025",
-      time: "8:00 PM EST",
-      spots: 20
-    }
-  ];
-
-  return (
-    <MainLayout activeTab="tools">
+  const mentoringSessions = [{
+    id: 1,
+    title: "Balancing Faith and Corporate Culture",
+    mentor: "Elizabeth Davis, CFO & Catholic Women's Group Leader",
+    date: "May 10, 2025",
+    time: "7:00 PM EST",
+    spots: 15
+  }, {
+    id: 2,
+    title: "Catholic Leadership in Tech Industries",
+    mentor: "Thomas Rodriguez, Senior Engineering Director",
+    date: "May 15, 2025",
+    time: "6:30 PM EST",
+    spots: 10
+  }, {
+    id: 3,
+    title: "From Youth Ministry to Management Skills",
+    mentor: "Fr. Robert Johnson, Former Business Executive",
+    date: "May 20, 2025",
+    time: "8:00 PM EST",
+    spots: 20
+  }];
+  return <MainLayout activeTab="tools">
       <div className="space-y-6">
         <div>
           <h2 className="text-2xl font-bold">Professional & Spiritual Development</h2>
@@ -95,8 +80,7 @@ const Tools = () => {
           </TabsList>
 
           <TabsContent value="courses" className="space-y-4">
-            {courses.map((course) => (
-              <Card key={course.id} className="overflow-hidden">
+            {courses.map(course => <Card key={course.id} className="overflow-hidden">
                 <div className="flex flex-col md:flex-row">
                   <div className="bg-brand/10 flex items-center justify-center w-full h-32 md:w-48 md:h-auto">
                     <Book size={40} className="text-brand" />
@@ -105,7 +89,7 @@ const Tools = () => {
                     <CardHeader className="pb-2">
                       <div className="flex justify-between items-start">
                         <div>
-                          <CardTitle>{course.title}</CardTitle>
+                          <CardTitle className="my-[3px] py-0 font-normal px-0 text-2xl">{course.title}</CardTitle>
                           <CardDescription className="text-brand">
                             {course.instructor}
                           </CardDescription>
@@ -127,13 +111,11 @@ const Tools = () => {
                     </CardFooter>
                   </div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </TabsContent>
 
           <TabsContent value="mentoring" className="space-y-4">
-            {mentoringSessions.map((session) => (
-              <Card key={session.id}>
+            {mentoringSessions.map(session => <Card key={session.id}>
                 <CardHeader>
                   <CardTitle className="text-lg">{session.title}</CardTitle>
                   <CardDescription>{session.mentor}</CardDescription>
@@ -153,8 +135,7 @@ const Tools = () => {
                   <Button variant="outline">View Details</Button>
                   <Button className="bg-brand hover:bg-brand-600">Register</Button>
                 </CardFooter>
-              </Card>
-            ))}
+              </Card>)}
           </TabsContent>
 
           <TabsContent value="events" className="min-h-[200px] flex flex-col items-center justify-center">
@@ -171,8 +152,6 @@ const Tools = () => {
           </TabsContent>
         </Tabs>
       </div>
-    </MainLayout>
-  );
+    </MainLayout>;
 };
-
 export default Tools;
