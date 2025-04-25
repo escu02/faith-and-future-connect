@@ -1,3 +1,4 @@
+
 import React from "react";
 import MainLayout from "../components/layout/MainLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,7 +7,8 @@ import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, MapPin, Book, Edit, Calendar, User, MessageSquare, Link } from "lucide-react";
+import { Briefcase, MapPin, Book, Cog, MessageSquare, Link as LinkIcon } from "lucide-react";
+
 const Profile = () => {
   return <MainLayout activeTab="profile">
       <div className="space-y-6">
@@ -26,9 +28,12 @@ const Profile = () => {
                   <p className="text-gray-600">Business Development Associate | St. Thomas Parish Youth Leader</p>
                 </div>
                 <div className="pt-4 py-[8px]">
-                  <Button variant="outline" className="border-brand text-brand hover:bg-brand/10 text-base">
-                    <Edit size={16} className="mr-2" />
-                    Edit Profile
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className="border-brand text-brand hover:bg-brand/10"
+                  >
+                    <Cog size={16} />
                   </Button>
                 </div>
               </div>
