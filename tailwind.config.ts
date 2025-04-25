@@ -32,48 +32,18 @@ export default {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))'
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))'
-        },
         brand: {
-          DEFAULT: '#9b87f5',
-          50: '#f5f3fe',
-          100: '#ebe7fd',
-          200: '#d6cefb',
-          300: '#b7a8f8',
-          400: '#9b87f5',
-          500: '#7857ed',
-          600: '#6a3ce0',
-          700: '#5a2fc3',
-          800: '#4b28a0',
-          900: '#3f2283'
+          DEFAULT: '#0EA5E9', // Ocean Blue
+          50: '#E6F2FD',
+          100: '#B8E0F9',
+          200: '#8ACEF5',
+          300: '#5BBCF1',
+          400: '#2AABED',
+          500: '#0EA5E9',
+          600: '#0C8AC5',
+          700: '#0A70A1',
+          800: '#08567D',
+          900: '#063C59'
         }
       },
       borderRadius: {
