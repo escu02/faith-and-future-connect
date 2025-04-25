@@ -6,6 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Input } from "@/components/ui/input";
 import { Briefcase, MapPin, Search } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Jobs = () => {
   // Sample job listings
@@ -14,6 +15,7 @@ const Jobs = () => {
       id: 1,
       title: "Project Coordinator",
       company: "Catholic Charities USA",
+      logo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       location: "Washington, DC",
       type: "Full-time",
       description:
@@ -24,6 +26,7 @@ const Jobs = () => {
       id: 2,
       title: "Marketing Specialist",
       company: "Ignatius Press",
+      logo: "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
       location: "San Francisco, CA",
       type: "Full-time",
       description:
@@ -34,6 +37,7 @@ const Jobs = () => {
       id: 3,
       title: "Finance Intern",
       company: "Knights of Columbus Asset Advisors",
+      logo: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       location: "New Haven, CT",
       type: "Internship",
       description:
@@ -44,10 +48,33 @@ const Jobs = () => {
       id: 4,
       title: "Human Resources Manager",
       company: "Franciscan University",
+      logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       location: "Steubenville, OH",
       type: "Full-time",
       description:
         "We're seeking an HR professional who understands the mission of Catholic education and can help us build a culture of faith and excellence.",
+      posted: "3 days ago"
+    },
+    {
+      id: 5,
+      title: "Technology Consultant",
+      company: "Deloitte",
+      logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      location: "Multiple Locations",
+      type: "Full-time",
+      description:
+        "Join our technology consulting practice where faith and professional excellence meet. We value candidates with strong leadership experience in faith-based organizations.",
+      posted: "1 day ago"
+    },
+    {
+      id: 6,
+      title: "Investment Banking Analyst",
+      company: "Goldman Sachs",
+      logo: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      location: "New York, NY",
+      type: "Full-time",
+      description:
+        "Looking for analysts who bring diverse perspectives and strong ethical foundations. Leadership experience in Catholic youth organizations is highly valued.",
       posted: "3 days ago"
     }
   ];
@@ -107,9 +134,15 @@ const Jobs = () => {
             <Card key={job.id} className="hover:border-brand/50 cursor-pointer transition-all">
               <CardHeader className="pb-2">
                 <div className="flex justify-between">
-                  <div>
-                    <h3 className="font-semibold">{job.title}</h3>
-                    <p className="text-sm text-gray-500">{job.company}</p>
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-12 w-12">
+                      <AvatarImage src={job.logo} alt={job.company} />
+                      <AvatarFallback>{job.company[0]}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h3 className="font-semibold">{job.title}</h3>
+                      <p className="text-sm text-gray-500">{job.company}</p>
+                    </div>
                   </div>
                   <span className="text-xs text-gray-400">{job.posted}</span>
                 </div>
@@ -136,3 +169,4 @@ const Jobs = () => {
 };
 
 export default Jobs;
+
