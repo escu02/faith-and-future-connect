@@ -7,7 +7,7 @@ import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase, MapPin, Book, Cog, MessageSquare, Link as LinkIcon } from "lucide-react";
+import { Briefcase, MapPin, Book, Cog, MessageSquare, LinkIcon, User } from "lucide-react";
 
 const Profile = () => {
   return <MainLayout activeTab="profile">
@@ -88,7 +88,7 @@ const Profile = () => {
                       <span>johndoe@email.com</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Link size={16} className="text-gray-400" />
+                      <LinkIcon size={16} className="text-gray-400" />
                       <span>linkedin.com/in/johndoe</span>
                     </div>
                   </div>
