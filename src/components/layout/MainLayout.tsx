@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import { Home, Briefcase, Book, User, Moon, Sun } from "lucide-react";
@@ -40,10 +39,10 @@ const MainLayout = ({ children, activeTab }: MainLayoutProps) => {
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </Button>
-            <button className="text-sm font-medium text-foreground hover:text-brand transition-colors">
+            <button className="text-sm md:text-base font-medium text-foreground hover:text-brand transition-colors">
               Sign In
             </button>
-            <button className="px-4 py-2 rounded-md bg-brand text-white hover:bg-brand-600 transition-colors font-medium">
+            <button className="px-3 md:px-4 py-2 rounded-md bg-brand text-white hover:bg-brand-600 transition-colors font-medium text-sm md:text-base">
               Sign Up
             </button>
           </div>
